@@ -1,8 +1,6 @@
-import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
-import json from '@eslint/json';
 import css from '@eslint/css';
 import { defineConfig } from 'eslint/config';
 
@@ -15,6 +13,7 @@ export default defineConfig([
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        parser: '@typescript-eslint/parser',
       },
       globals: globals.browser,
     },
