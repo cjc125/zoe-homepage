@@ -42,8 +42,10 @@ function handleItemClick(routeName?: RouteRecordNameGeneric) {
 
 <style scoped lang="scss">
 .nav {
+  max-width: 100vw;
   background-color: #ffffff;
   border-bottom: 1px solid #DCEAFB;
+  flex-wrap: wrap;
   @include flex-layout(row, flex-start, center);
 
   &__item {

@@ -25,9 +25,11 @@ import { PhoneCallIcon } from 'lucide-vue-next';
 .top-info {
   padding: 20px 100px 20px 50px;
   background-color: #F0F8FF;
+  flex-wrap: wrap;
   @include flex-layout(row, space-between, center);
 
   &__slogan {
+    margin-right: 24px;
     font-size: xx-large;
     font-weight: 800;
     background: linear-gradient(90deg, #4CA1FF, #74D0FF);
@@ -37,7 +39,7 @@ import { PhoneCallIcon } from 'lucide-vue-next';
   }
 
   &__contact {
-    margin-left: 24px;
+    margin: 12px 0;
     color: #5A5A5A;
     @include flex-center(row);
 
