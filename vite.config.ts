@@ -11,7 +11,5 @@ export default defineConfig({
     },
   },
   server: {
-    // 支持 history 模式的 fallback
-    historyApiFallback: true,
   },
 });
