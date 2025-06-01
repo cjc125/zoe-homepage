@@ -12,4 +12,11 @@ export default defineConfig({
   },
   server: {
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/styles/mixin.scss" as *;',
+      },
+    },
+  },
 });
