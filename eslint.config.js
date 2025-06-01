@@ -44,15 +44,7 @@ export default defineConfig([
 
   // Vue 3 推荐配置
   pluginVue.configs['flat/recommended'],
-
-  // JSON 支持（可选）
-  {
-    files: ['**/*.json'],
-    plugins: { json },
-    languageOptions: { parserOptions: { ecmaVersion: 2021 } },
-    rules: json.configs.recommended.rules,
-  },
-
+  
   // CSS 支持（可选）
   {
     files: ['**/*.css'],
