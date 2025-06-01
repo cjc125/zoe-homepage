@@ -49,11 +49,10 @@ function handleItemClick(routeName?: RouteRecordNameGeneric) {
   @include flex-layout(row, flex-start, center);
 
   &__item {
-    padding: 20px;
+    padding: 20px 50px;
     color: #333333;
     font-weight: 500;
     font-size: 16px;
-    padding: 12px 20px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;

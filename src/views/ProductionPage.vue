@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const msg = ref('CanadaGoods');
+const msg = ref('ProductionPage');
 </script>
 
 <template>

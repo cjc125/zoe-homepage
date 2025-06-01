@@ -1,8 +1,8 @@
 export const RouteName = {
+  home: 'home',
   aboutUs: 'aboutUs',
-  chinaGoods: 'chinaGoods',
-  canadaGoods: 'canadaGoods',
-  agency: 'agency',
-  assistance: 'assistance',
+  systemIntegration: 'systemIntegration',
+  production: 'production',
+  news: 'news',
   contactUs: 'contactUs',
 } as const;

@@ -11,48 +11,48 @@ type routeConfigItem = RouteRecordRaw & {
 const routeConfigs: routeConfigItem[] = [
   {
     path: '/',
+    name: RouteName.home,
+    component: () => import('@/views/HomePage.vue'),
+    meta: {
+      title: 'Home',
+    },
+  },
+  {
+    path: '/about-us',
     name: RouteName.aboutUs,
-    component: () => import('@/views/AboutUs.vue'),
+    component: () => import('@/views/AboutUsPage.vue'),
     meta: {
       title: 'About Us',
     },
   },
   {
-    path: '/china-made-equipment',
-    name: RouteName.chinaGoods,
-    component: () => import('@/views/ChinaGoods.vue'),
+    path: '/system-integration',
+    name: RouteName.systemIntegration,
+    component: () => import('@/views/SystemIntegrationPage.vue'),
     meta: {
-      title: 'China-Made Equipment',
+      title: 'System Integration',
     },
   },
   {
-    path: '/canada-made-food',
-    name: RouteName.canadaGoods,
-    component: () => import('@/views/CanadaGoods.vue'),
+    path: '/production',
+    name: RouteName.production,
+    component: () => import('@/views/ProductionPage.vue'),
     meta: {
-      title: 'Canada-Made Food',
+      title: 'Production',
     },
   },
   {
-    path: '/import-export-agency',
-    name: RouteName.agency,
-    component: () => import('@/views/AgencyPage.vue'),
+    path: '/news',
+    name: RouteName.news,
+    component: () => import('@/views/NewsPage.vue'),
     meta: {
-      title: 'Import & Export Agency',
-    },
-  },
-  {
-    path: '/biz-assistance',
-    name: RouteName.assistance,
-    component: () => import('@/views/AssistancePage.vue'),
-    meta: {
-      title: 'BIZ Assistance',
+      title: 'News',
     },
   },
   {
     path: '/contact-us',
     name: RouteName.contactUs,
-    component: () => import('@/views/ContactUs.vue'),
+    component: () => import('@/views/ContactUsPage.vue'),
     meta: {
       title: 'Contact Us',
     },
