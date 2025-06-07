@@ -1,33 +1,22 @@
 import { newsMeta } from '@/content/news/meta';
 import dayjs from 'dayjs';
+import type { ComponentOptions } from 'vue';
 
-/**
- * Markdown内容加载器 - 处理动态加载和图片路径
- */
-export async function loadArticle(articleId: string) {
+export async function loadMarkdownComponent(articleId: string) {
   try {
     // 动态导入Markdown内容
-    const markdownModule = await import(`../content/news/${articleId}/index.md?raw`);
-    let content = markdownModule.default as string;
-    
-    // 处理Markdown中的相对路径图片引用
-    content = content.replace(
-      /!\[(.*?)\]\(\.(.*?)\)/g,
-      (_, alt, relativePath) => {
-        // 转换为正确的公共路径
-        return `![${alt}](/src/content/news/${articleId}${relativePath})`;
-      },
-    );
-    
+    const markdownModule: {
+      VueComponent: ComponentOptions;
+    } = await import(`../content/news/${articleId}/index.md`);
     return {
-      content,
-      success: true,
+      component: markdownModule.VueComponent,
+      success: true as const,
     };
   } catch (error) {
     console.error(`Failed to load article ${articleId}:`, error);
     return {
-      content: null,
-      success: false,
+      component: null,
+      success: false as const,
       error: (error as Error)?.message,
     };
   }
