@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ParagraphWithTitle from '@/components/ui/ParagraphWithTitle.vue';
-import { AboutUsParagraphs } from '@/constants/data';
+import { AboutUsParagraphs } from '@/assets/data/aboutUs';
 </script>
 
 <template>

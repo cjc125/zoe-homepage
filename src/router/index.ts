@@ -48,6 +48,14 @@ const routeConfigs: routeConfigItem[] = [
     meta: {
       title: 'News',
     },
+    children: [  
+      {
+        path: '/news/:id',
+        name: RouteName.newsDetail,
+        component: () => import('@/views/NewsDetailPage.vue'),
+        props: true,
+      },
+    ],
   },
   {
     path: '/contact-us',

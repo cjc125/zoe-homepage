@@ -4,5 +4,6 @@ export const RouteName = {
   systemIntegration: 'systemIntegration',
   production: 'production',
   news: 'news',
+  newsDetail: 'newsDetail',
   contactUs: 'contactUs',
 } as const;

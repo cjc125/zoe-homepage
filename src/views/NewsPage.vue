@@ -6,6 +6,7 @@ const msg = ref('NewsPage');
 <template>
   <div>
     {{ msg }}
+    <RouterView />
   </div>
 </template>
 
