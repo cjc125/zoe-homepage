@@ -4,7 +4,7 @@
 
 </aside>
 
-![person.png](person.png)
+![person.png](./person.png)
 
 # 🌈 About Me
 
