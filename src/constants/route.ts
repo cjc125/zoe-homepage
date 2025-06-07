@@ -5,5 +5,6 @@ export const RouteName = {
   production: 'production',
   news: 'news',
   newsDetail: 'newsDetail',
+  newsList: 'newsList',
   contactUs: 'contactUs',
 } as const;

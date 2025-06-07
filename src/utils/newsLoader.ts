@@ -1,3 +1,6 @@
+import { newsMeta } from '@/content/news/meta';
+import dayjs from 'dayjs';
+
 /**
  * Markdown内容加载器 - 处理动态加载和图片路径
  */
@@ -28,4 +31,16 @@ export async function loadArticle(articleId: string) {
       error: (error as Error)?.message,
     };
   }
+}
+
+export function getNewsList() {
+  return newsMeta;
+}
+
+export function getSingleNewsMeta(id: string) {
+  return newsMeta.find((item) => item.id === id);
+}
+
+export function getNewsFormatTime(time: number) {
+  return dayjs(time).format('YYYY-MM-DD');
 }

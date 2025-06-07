@@ -10,7 +10,7 @@ type routeConfigItem = RouteRecordRaw & {
 
 const routeConfigs: routeConfigItem[] = [
   {
-    path: '/',
+    path: '/home',
     name: RouteName.home,
     component: () => import('@/views/HomePage.vue'),
     meta: {
@@ -44,15 +44,21 @@ const routeConfigs: routeConfigItem[] = [
   {
     path: '/news',
     name: RouteName.news,
-    component: () => import('@/views/NewsPage.vue'),
+    redirect: '/news/detail',
     meta: {
       title: 'News',
     },
-    children: [  
+    children:[
       {
-        path: '/news/:id',
+        path: '/news/detail',
+        name: RouteName.newsList,
+        component: () => import('@/views/news/NewsListPage.vue'),
+
+      },
+      {
+        path: '/news/detail/:id',
         name: RouteName.newsDetail,
-        component: () => import('@/views/NewsDetailPage.vue'),
+        component: () => import('@/views/news/NewsDetailPage.vue'),
         props: true,
       },
     ],
@@ -67,7 +73,7 @@ const routeConfigs: routeConfigItem[] = [
   },
   {
     path: '/:catchAll(.*)',
-    redirect: '/',
+    redirect: '/home',
   },
 ];
 

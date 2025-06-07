@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
+      github-markdown-css:
+        specifier: ^5.8.1
+        version: 5.8.1
       lucide-vue-next:
         specifier: ^0.511.0
         version: 0.511.0(vue@3.5.16(typescript@5.8.3))
@@ -1066,6 +1072,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
+
   de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
 
@@ -1584,6 +1593,10 @@ packages:
     resolution: {integrity: sha512-vOIS3j0XoTCxq9pkGj43gEix82RkI5FveNgaFZutjbaui/HH+4fR8Y56dwXDuxYo8hR4xOo6/j2h1WHoQW6XLw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  github-markdown-css@5.8.1:
+    resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
+    engines: {node: '>=10'}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -3940,6 +3953,8 @@ snapshots:
       bin-build: 3.0.0
       bin-wrapper: 4.1.0
 
+  dayjs@1.11.13: {}
+
   de-indent@1.0.2: {}
 
   debug@4.4.1:
@@ -4517,6 +4532,8 @@ snapshots:
       bin-wrapper: 4.1.0
       execa: 5.1.1
       logalot: 2.1.0
+
+  github-markdown-css@5.8.1: {}
 
   glob-parent@5.1.2:
     dependencies:
